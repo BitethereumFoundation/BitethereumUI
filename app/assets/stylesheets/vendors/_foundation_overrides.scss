@@ -1,0 +1,235 @@
+.title-bar.primary {
+  padding: 0;
+
+  .title {
+    font-size: 1.0625rem;
+  }
+}
+
+.button {
+  margin-bottom: 0;
+}
+
+.title-bar.primary .action-sheet a {
+  color: $body-font-color;
+}
+
+.action-sheet {
+  //width: auto;
+  //min-width: 12em;
+  width: 120px;
+  left: -10px!important;
+  top: 28px;
+  border-radius: 0px;
+
+  background: transparent!important;
+  ul {
+      overflow: hidden!important;
+      font-size: 14px;
+      a {
+        line-height: 32px;
+          border-top: none;
+        height: 32px!important;
+        margin: 0!important;
+        padding: 0!important;
+        float:none!important;
+        width: 100%!important;
+        text-align: center;
+        border-radius: 0px;
+        top: 0!important;
+      }
+
+  }
+
+  span {
+    display: inline-block!important;
+    height: 32px!important;
+    line-height: 32px!important;
+    &.icon{
+      margin-right: 10px;
+    }
+  }
+
+  .no-first-element-top-border > :first-child > a {
+    border-top: none;
+    //border-top-left-radius: 4px;
+    //border-top-right-radius: 4px;
+  }
+  ul > :last-child > a {
+    border-bottom: none;
+    //border-bottom-left-radius: 4px;
+    //border-bottom-right-radius: 4px;
+  }
+
+
+  ul > li > a
+  {
+      border-bottom: none;
+      background: rgba(0,0,0,0.5)!important;
+      &:hover{
+        background: rgba(0,0,0,1)!important;
+      }
+  }
+  &::before {
+    left: auto!important;
+    right: 15px;
+    top: -37px;
+    padding-top:30px;
+    //border: 1px solid rgba(0,0,0,0.1);
+    border-top: 0;
+    border-left: 7px solid transparent!important;
+    border-right: 7px solid transparent!important;
+    border-bottom: 7px solid rgba(0,0,0,0.3)!important;
+  }
+  &::after {
+    left: auto!important;
+    right: 15px;
+    top: -37px;
+    padding-top:30px;
+    //border: 1px solid rgba(0,0,0,0.1);
+    border-top: 0;
+    border-left: 7px solid transparent!important;
+    border-right: 7px solid transparent!important;
+    border-bottom: 7px solid rgba(0,0,0,0.3)!important;
+  }
+}
+
+.has-error,
+div.has-error > label,
+div.has-error > input,
+div.has-error > input:hover,
+div.has-error > input:focus {
+  border-color: #a94442;
+  color: #a94442;
+}
+
+.has-error, .facolor-error, .facolor-warning {
+    max-width: 30rem;
+}
+
+.modal {
+    .has-error, .facolor-error, .facolor-warning {
+        max-width: 35rem;
+    }
+}
+
+.menu-bar.primary > li > a.active {
+  background: #414141;
+  color: #fff;
+}
+
+.menu-bar.secondary > li > a.active {
+  background: #ededed;
+  color: #000;
+}
+
+.inline {
+  display: inline-block;
+}
+
+a {
+  cursor: pointer;
+  color: #008CBA;
+}
+
+.left-setting-panel {
+  width: 130px;
+  height: 522px;
+  background-color: #F0F0F0;
+  padding: 0!important;
+
+}
+
+.left-setting-panel-span {
+  box-shadow:0 1px 0 rgba(0,0,0,.2) inset,0 -1x 0 rgba(255,255,255,.2) inset;
+}
+
+.tabs {
+  border-bottom: 1px solid #444;
+  margin-bottom: 1rem;
+  > .tab-item {
+    background: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.8rem;
+    &.is-active {
+      background: none;
+      border-bottom: 2px solid #f00;
+      &:hover, &:focus, &:active {
+        background: none;
+      }
+    }
+    &:hover, &:focus, &:active {
+      background: none;
+    }
+  }
+}
+
+.label, .label.warning, .label.success, .label.info, .label.cancel, .label.alert {
+  background-color: transparent;
+  border: 1px solid #444;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.74rem;
+}
+
+.notification {
+  // Extend the base selector to get core styles
+  @extend %notification;
+  // Use the layout mixin to position and structure the notification
+  @include notification-layout(
+    $x: right, // Can be left, middle, or right
+    $y: bottom // Can be top or bottom
+  );
+}
+
+.modal {
+  //padding: 1rem 1rem 1rem 1rem;
+  padding: 0px;
+  h3 {
+    margin-bottom: 1rem;
+  }
+  .button-group {
+    margin-bottom: 0;
+  }
+
+  button, div.button {
+      font-size: 1.1rem;
+  }
+}
+
+.inline-label {
+  margin-bottom: 0;
+}
+
+.block-list {
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  li > a {
+    padding: 0.6rem;
+  }
+
+  li {
+      border-top: none !important;
+
+      &.with-dropdown > select {
+          -webkit-appearance: menulist;
+          -moz-appearance: menulist;
+          appearance: menulist;
+      }
+  }
+}
+
+code {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+// expand the container to fit the maximum width by default
+.grid-container {
+  width: 100%;
+}
